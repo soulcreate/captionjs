@@ -31,12 +31,13 @@
 
 			// Form basic structures and assign vars
 			var $this       = $(this),  // The image
+				style	    = $this.attr('style') ? ' style="'+$this.attr('style')+'" ' : '',
 				$caption    = $this.data('caption') ? $this.data('caption') : $this.attr('alt'),
 				$figure     = $this.wrap('<figure class="' + options.class_name + '"/>').after('<figcaption/>').parent(),
 				$figcaption = $this.next('figcaption').html($caption),
 				target_width,
 				target_height;
-
+      			$this.removeAttr("style");
 			// If no caption is supplied, just remove the figcaption.
 			if ($caption === '') $figcaption.remove();
 
