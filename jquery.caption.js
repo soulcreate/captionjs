@@ -33,7 +33,7 @@
 			var $this       = $(this),  // The image
 				style	    = $this.attr('style') ? ' style="'+$this.attr('style')+'" ' : '',
 				$caption    = $this.data('caption') ? $this.data('caption') : $this.attr('alt'),
-				$figure     = $this.wrap('<figure class="' + options.class_name + '"/>').after('<figcaption/>').parent(),
+				$figure     = $this.wrap('<figure class="' + options.class_name + '"'+style+'/>').after('<figcaption/>').parent(),
 				$figcaption = $this.next('figcaption').html($caption),
 				target_width,
 				target_height;
